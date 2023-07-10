@@ -16,7 +16,7 @@ int count_word(char *s)
 
 	for (c = 0; s[c] != '\0'; c++)
 	{
-		if (s[c] == '')
+		if (s[c] == ' ')
 			flag = 0;
 		else
 			if (flag == 0)
@@ -60,7 +60,6 @@ char **strtow(char *str)
 				tmp = (char *) malloc(sizeof(char) * (c + 1));
 				if (tmp == NULL)
 					return (NULL);
-
 				while (start < end)
 					*tmp++ = str[start++];
 				*tmp = '\0';
